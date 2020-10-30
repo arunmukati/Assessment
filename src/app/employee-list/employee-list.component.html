@@ -1,0 +1,22 @@
+<div class="cardView">
+  <div class="card" *ngFor="let employee of emlployeeList">
+    <div class="card-body">
+      <div class="card-head">
+        <div class="name">
+          <div class="profile">
+            <img src="./assets/icons/profile.png" alt="">
+          </div>
+          <div class="namePos">
+            <h1>{{employee.name}}</h1>
+            <h3>{{employee.position}}</h3>
+          </div>
+        </div>
+        <div class="close" (click)="deleteEmployee(employee.id)"><img src="./assets/icons/close.png" alt=""></div>
+      </div>
+      <p>{{employee.about}}</p>
+    </div>
+    <div class="card-footer">
+      <h1 class="joinDate"><span>Joining Date: &nbsp; </span> {{employee.joiningDate | date : "dd/LL/yy" }}</h1>
+    </div>
+  </div>
+</div>
