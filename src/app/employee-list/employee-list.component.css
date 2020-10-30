@@ -7,7 +7,7 @@
 }
 .card{
   width: 320px;
-  height:230px;
+  min-height:230px;
     box-shadow: 0px 0px 15px #c7c5c5;
   padding: 10px 20px;
       margin:10px 10px;
@@ -20,11 +20,11 @@
   width: 100%;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  /* align-items: center; */
 }
 .card-head .name{
   display: flex;
-  align-items: center;
+  /* align-items: center; */
   width: calc(100% - 25px);
 }
 .card-head .profile{
@@ -41,9 +41,11 @@
 }
 .card-head h1{
   font-size: 18px;
+      word-break: break-word
 }
 .card-head h3{
   font-size: 14px;
+      word-break: break-word
 }
 .card-head .close{
   width: 20px;

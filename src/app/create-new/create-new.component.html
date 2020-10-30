@@ -1,30 +1,29 @@
 <div id="formWrap">
   <form *ngIf="add" action="submit" (ngSubmit)="submitEmployeeDetail()" [formGroup]="detailForm">
-    <!-- <label for="name">Name: </label> -->
-    <!-- [class]="detailForm.controls['name'].errors.required ? 'error' : ''" -->
+
     <input type="text" formControlName="name" id="name" placeholder="Name">
     <div class="error" *ngIf="submitted && detailForm.controls['name'].errors">
       *Name is required.
     </div>
-    <div class="error" *ngIf=" detailForm.controls['name'].hasError('maxlength')">
+    <!-- <div class="error" *ngIf=" detailForm.controls['name'].hasError('maxlength')">
       *Name should be less than 16 Characters.
-    </div>
-    <!-- <label for="position">Position: </label> -->
+    </div> -->
+
     <input type="text" formControlName="position" id="" placeholder="Position">
     <div class="error" *ngIf="submitted && detailForm.controls['position'].errors">
       *Position is required.
     </div>
-      <div class="error" *ngIf="detailForm.controls['position'].hasError('maxlength')">
+      <!-- <div class="error" *ngIf="detailForm.controls['position'].hasError('maxlength')">
         *Position should be less than 16 characters.
-      </div>
-    <!-- <label for="about">About</label> -->
+      </div> -->
+
     <textarea formControlName="about" placeholder="About" id="" cols="30" rows="5"></textarea>
     <div class="error" *ngIf="submitted && detailForm.controls['about'].errors">
       *About is required.
     </div>
-     <div class="error" *ngIf="detailForm.controls['about'].hasError('maxlength')">
+     <!-- <div class="error" *ngIf="detailForm.controls['about'].hasError('maxlength')">
        *About should be less than 180 characters.
-     </div>
+     </div> -->
 
     <div class="datePicker">
       <input formControlName="joiningDate" placeholder="Joining Date" [matDatepicker]="joiningDate">

@@ -21,24 +21,21 @@ export class CreateNewComponent implements OnInit {
       name: new FormControl("", [
         Validators.required,
         Validators.minLength(1),
-        Validators.maxLength(16),
       ]),
       position: new FormControl("", [
         Validators.required,
         Validators.minLength(1),
-        Validators.maxLength(16),
       ]),
       about: new FormControl("", [
         Validators.required,
         Validators.minLength(1),
-        Validators.maxLength(180),
       ]),
       joiningDate: new FormControl("", [Validators.required]),
       id: new FormControl(null),
     });
   }
   submitEmployeeDetail() {
-    console.log(this.detailForm.value);
+    console.log(this.detailForm);
     this.submitted = true;
     if (this.detailForm.invalid) {
       return;
