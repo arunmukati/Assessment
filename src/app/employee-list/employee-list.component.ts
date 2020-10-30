@@ -45,7 +45,5 @@ export class EmployeeListComponent implements OnInit {
         this.spinner.hide();
       });
   }
-  search(ev) {
-    console.log("serach fn", ev);
-  }
+ 
 }
