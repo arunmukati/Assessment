@@ -10,15 +10,7 @@ import { Title,Meta } from '@angular/platform-browser';
 })
 export class AppComponent {
   title = "Assessment";
-  constructor(private db: LocalDbService) {
-
-  }
-  ngOnInit{
-    this.metaTagService.addTags([
-				{ property:'og:title' , content : "Rapidken - Fast Learning----" },
-				{ property:'title' , content : "Rapidken - Fast Learning--" },
-				
-			]);
-  }
+  constructor() {}
+  ngOnInit{}
 }
 
